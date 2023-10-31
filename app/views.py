@@ -9,7 +9,7 @@ def near_hundred(request: HttpRequest, n) -> HttpResponse:
     return HttpResponse((100 - abs(n)) <= 10 or (200 - abs(n)) <= 10)
 
 
-def string_splosion(request: HttpRequest, string) -> HttpResponse:
+def string_splosion(request: HttpRequest, string: str) -> HttpResponse:
     new_word = list(string)
     answer = ""
     answer2 = ""
@@ -22,11 +22,11 @@ def string_splosion(request: HttpRequest, string) -> HttpResponse:
     return HttpResponse(answer2)
 
 
-def cat_dog(request: HttpRequest, string) -> HttpResponse:
+def cat_dog(request: HttpRequest, string: str) -> HttpResponse:
     return HttpResponse(f"{True if 'cat' and 'dog' in string else False}")
 
 
-def lone_sum(request: HttpRequest, a, b, c) -> HttpResponse:
+def lone_sum(request: HttpRequest, a: int, b: int, c: int) -> HttpResponse:
     if a != b:
         pass
     else:
