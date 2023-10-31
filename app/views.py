@@ -5,7 +5,7 @@ from django.http.request import HttpRequest
 # Create your views here.
 
 
-def near_hundred(request: HttpRequest, n) -> HttpResponse:
+def near_hundred(request: HttpRequest, n: str) -> HttpResponse:
     return HttpResponse((100 - abs(n)) <= 10 or (200 - abs(n)) <= 10)
 
 
